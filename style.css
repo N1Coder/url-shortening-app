@@ -115,6 +115,7 @@ section.hero-section .hero-left h1 {
 section.hero-section .hero-left p {
   font-size: var(--font-paragraph);
   color: hsla(var(--neutral-gray));
+  font-weight: 500;
 }
 
 section.hero-section .hero-left .btn-hero {
@@ -130,7 +131,8 @@ section.hero-section .hero-right {
 }
 
 section.about-section {
-  background-color: hsla(var(--neutral-gray), 0.25);
+  background-color: hsla(var(--neutral-gray), 0.2);
+  padding-bottom: 12rem;
 }
 
 section.about-section .form-shorten-link {
@@ -166,6 +168,80 @@ section.about-section .form-shorten-link .btn-shorten-link {
   outline: none;
   border: none;
   cursor: pointer;
+}
+
+section.about-section .about-heading {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+section.about-section .about-heading h2 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.25;
+  color: hsla(var(--neutral-very-dark-blue));
+}
+
+section.about-section .about-heading p {
+  margin-top: 1rem;
+  color: hsla(var(--neutral-gray));
+  font-weight: 500;
+}
+
+section.about-section .about-cards {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-top: 5.5rem;
+}
+
+section.about-section .about-cards .card {
+  background-color: #fff;
+  padding: 2rem;
+  padding-top: 0;
+  border-radius: 0.75rem;
+}
+
+section.about-section .about-cards .card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: hsla(var(--primary-dark-violet));
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+section.about-section .about-cards .card h3 {
+  font-size: clamp(1.15rem, 5vw, 1.25rem);
+  line-height: 1.25;
+  color: hsla(var(--neutral-very-dark-blue));
+  margin-bottom: 1rem;
+}
+
+section.about-section .about-cards .card p {
+  color: hsla(var(--neutral-gray));
+  font-weight: 500;
+}
+
+section.about-section .about-cards .card:nth-child(3) {
+  transform: translateY(15%);
+}
+
+section.about-section .about-cards .card:nth-child(4) {
+  transform: translateY(30%);
+}
+
+section.about-section .about-cards .primary-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 0.5rem;
+  background-color: hsla(var(--primary-cyan));
+  z-index: -1;
 }
 
 @media (max-width: 576px) {
@@ -307,5 +383,29 @@ section.about-section .form-shorten-link .btn-shorten-link {
 
   section.about-section .form-shorten-link * {
     width: 100%;
+  }
+
+  section.about-section .about-heading {
+    margin-top: 0;
+  }
+
+  section.about-section .about-cards {
+    flex-direction: column;
+  }
+
+  section.about-section .about-cards .card {
+    text-align: center;
+  }
+
+  section.about-section .about-cards .card .card-icon {
+    margin-inline: auto;
+  }
+
+  section.about-section .about-cards .primary-line {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 0.5rem;
   }
 }
