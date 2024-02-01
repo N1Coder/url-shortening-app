@@ -48,6 +48,7 @@ section {
   color: #fff;
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
+  font-weight: 500;
 }
 
 a {
@@ -244,6 +245,75 @@ section.about-section .about-cards .primary-line {
   z-index: -1;
 }
 
+section.getstarted-section {
+  text-align: center;
+  padding: 3rem 0;
+  background-color: hsla(var(--primary-dark-violet));
+  background-image: url("images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+  min-height: 0;
+}
+
+section.getstarted-section h2 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+footer.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(var(--neutral-very-dark-violet));
+  padding: var(--gap-section-inline);
+  padding-block: 4rem;
+}
+
+footer.footer .footer-logo {
+  color: #fff;
+}
+
+footer.footer ul {
+  list-style: none;
+}
+
+footer.footer ul li {
+  color: #fff;
+}
+
+footer.footer ul li a {
+  color: hsla(var(--neutral-grayish-violet));
+}
+
+footer.footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3.5rem;
+}
+
+footer.footer .footer-links ul.footer-menu-links:not(:first-child) {
+  margin-left: 7.5rem;
+}
+
+footer.footer ul.footer-menu-links li:first-child {
+  margin-bottom: 1rem;
+}
+
+footer.footer ul.footer-menu-links li:not(:first-child) {
+  margin-bottom: 0.5rem;
+}
+
+footer.footer ul.footer-social-links {
+  display: flex;
+  align-items: center;
+}
+
+footer.footer ul.footer-social-links li:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
 @media (max-width: 576px) {
   header {
     padding-inline: var(--gap-section-inline-mobile);
@@ -407,5 +477,44 @@ section.about-section .about-cards .primary-line {
     transform: translateX(-50%);
     height: 100%;
     width: 0.5rem;
+  }
+
+  section.getstarted-section {
+    background-image: url("images/bg-boost-mobile.svg");
+    background-size: 100%;
+    background-position: right;
+    padding: var(--gap-section-inline-mobile);
+    padding-block: 5rem;
+  }
+
+  section.getstarted-section .btn-primary {
+    padding: 0.75rem 2rem;
+  }
+
+  footer.footer {
+    flex-direction: column;
+    align-items: center;
+    padding: var(--gap-section-inline-mobile);
+    padding-block: 3.5rem;
+  }
+
+  footer.footer ul li {
+    text-align: center;
+  }
+
+  footer.footer .footer-links {
+    flex-direction: column;
+
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+
+  footer.footer .footer-links ul.footer-menu-links:not(:first-child) {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+
+  footer.footer ul.footer-social-links {
+    margin-top: 2.5rem;
   }
 }
